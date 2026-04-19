@@ -6,7 +6,6 @@
     <title>Available Animals – Stray Love PH</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  
 </head>
 <body>
 
@@ -18,7 +17,6 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="animals.html" class="active">Available Animals</a></li>
-          
             <li><a href="surrender.html">Surrender</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
@@ -39,7 +37,6 @@
         </div>
 
         <div class="cards animals-cards" id="petGrid">
-
             <div class="card" data-type="dog">
                 <div class="card-img-wrap">
                     <img src="dog1.jpg" alt="Buddy">
@@ -117,11 +114,9 @@
                     <button class="card-btn" onclick="openPetModal('Lily','Dog','1 year','Female','Aspin','Lily is a timid sweetheart who blossoms with patience and love. Needs a calm, quiet home. Fully vaccinated.','dog5.jpg')">Meet Lily →</button>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- ══════ PET INFO MODAL ══════ -->
     <div class="modal-overlay" id="petModalOverlay" onclick="closePetModal()">
         <div class="modal" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closePetModal()">✕</button>
@@ -144,7 +139,6 @@
         </div>
     </div>
 
-    <!-- ══════ ADOPTION SLIDE PANEL ══════ -->
     <div class="adopt-panel-overlay" id="adoptOverlay" onclick="closeAdoptPanel()"></div>
 
     <div class="adopt-panel" id="adoptPanel">
@@ -152,9 +146,7 @@
             <h3>Adoption Form &nbsp;<span class="pet-name-badge" id="panelPetName"></span></h3>
             <button class="panel-close" onclick="closeAdoptPanel()">✕</button>
         </div>
-
         <div class="adopt-panel-body">
-
             <div class="panel-steps">
                 <div class="panel-step-dot active" id="pdot1"><span>1</span><label>Your Info</label></div>
                 <div class="panel-step-line"></div>
@@ -163,89 +155,23 @@
                 <div class="panel-step-dot" id="pdot3"><span>3</span><label>Confirm</label></div>
             </div>
 
-            <!-- STEP 1 -->
             <div class="panel-form-step active" id="pstep1">
                 <h4>Tell us about yourself</h4>
-                <p class="step-sub">Fill in your personal information below.</p>
-                <div class="pf-two">
-                    <div class="pf-group">
-                        <label>Full Name <span class="req">*</span></label>
-                        <input type="text" id="pFullName" placeholder="e.g. Maria Santos">
-                    </div>
-                    <div class="pf-group">
-                        <label>Age <span class="req">*</span></label>
-                        <input type="number" id="pAge" placeholder="e.g. 28" min="18">
-                    </div>
-                </div>
                 <div class="pf-group">
-                    <label>Email Address <span class="req">*</span></label>
-                    <input type="email" id="pEmail" placeholder="e.g. maria@email.com">
-                </div>
-                <div class="pf-group">
-                    <label>Phone Number <span class="req">*</span></label>
-                    <input type="tel" id="pPhone" placeholder="+63 9XX XXX XXXX">
-                </div>
-                <div class="pf-group">
-                    <label>Complete Home Address <span class="req">*</span></label>
-                    <input type="text" id="pAddress" placeholder="Street, Barangay, City, Province">
+                    <label>Full Name</label>
+                    <input type="text" id="pFullName" placeholder="e.g. Juan Dela Cruz">
                 </div>
                 <div class="panel-nav">
-                    <span></span>
+                    <div></div>
                     <button class="btn-panel-next" onclick="pGoTo(2)">Next →</button>
                 </div>
             </div>
 
-            <!-- STEP 2 -->
             <div class="panel-form-step" id="pstep2">
-                <h4>Tell us about your home</h4>
-                <p class="step-sub">This helps us find the best match for you.</p>
+                <h4>Home Details</h4>
                 <div class="pf-group">
-                    <label>Type of Home <span class="req">*</span></label>
-                    <select id="pHomeType">
-                        <option value="">Select...</option>
-                        <option>House with yard</option>
-                        <option>House without yard</option>
-                        <option>Apartment / Condo</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="pf-two">
-                    <div class="pf-group">
-                        <label>Other pets at home?</label>
-                        <select id="pOtherPets">
-                            <option value="">Select...</option>
-                            <option>No other pets</option>
-                            <option>Yes – dogs</option>
-                            <option>Yes – cats</option>
-                            <option>Yes – both</option>
-                            <option>Yes – other animals</option>
-                        </select>
-                    </div>
-                    <div class="pf-group">
-                        <label>Children at home?</label>
-                        <select id="pChildren">
-                            <option value="">Select...</option>
-                            <option>No children</option>
-                            <option>Toddlers (0–5)</option>
-                            <option>Young kids (6–12)</option>
-                            <option>Teenagers (13–17)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="pf-group">
-                    <label>Hours pet will be alone daily</label>
-                    <select id="pAloneHours">
-                        <option value="">Select...</option>
-                        <option>0–2 hours</option>
-                        <option>2–4 hours</option>
-                        <option>4–6 hours</option>
-                        <option>6–8 hours</option>
-                        <option>8+ hours</option>
-                    </select>
-                </div>
-                <div class="pf-group">
-                    <label>Why do you want to adopt this pet?</label>
-                    <textarea id="pReason" placeholder="Tell us your story..." rows="3"></textarea>
+                    <label>Address</label>
+                    <input type="text" id="pAddress" placeholder="Your current address">
                 </div>
                 <div class="panel-nav">
                     <button class="btn-panel-back" onclick="pGoTo(1)">← Back</button>
@@ -253,15 +179,13 @@
                 </div>
             </div>
 
-            <!-- STEP 3 -->
             <div class="panel-form-step" id="pstep3">
                 <h4>Review Your Application</h4>
                 <p class="step-sub">Please check your details before submitting.</p>
                 <div class="summary-box" id="pSummaryBox"></div>
                 <div class="pf-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" id="pAgree">
-                        I confirm all information is accurate and agree to the shelter's adoption policies.
+                        <input type="checkbox" id="pAgree"> I confirm all information is accurate and agree to the shelter's adoption policies.
                     </label>
                 </div>
                 <div class="panel-nav">
@@ -270,7 +194,6 @@
                 </div>
             </div>
 
-            <!-- SUCCESS -->
             <div class="panel-form-step" id="pstepSuccess">
                 <div class="panel-success">
                     <div class="success-icon">🐾</div>
@@ -279,7 +202,6 @@
                     <button class="btn-done" onclick="closeAdoptPanel()">Back to Animals</button>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -289,180 +211,10 @@
                 <div class="logo-icon">🐾</div>
                 <span>Stray Love PH</span>
             </div>
-            <div class="footer-links">
-                <a href="animals.html">Animals</a>
-                <a href="surrender.html">Surrender</a>
-                <a href="about.html">About</a>
-            </div>
-            <p class="footer-copy">© 2026 Stray Love PH Shelter · strayloveph@gmail.com</p>
         </div>
     </footer>
 
-    <script>
-        let currentPet = '';
-
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
-        });
-
-        function filterPets(type, btn) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            document.querySelectorAll('#petGrid .card').forEach(card => {
-                card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none';
-            });
-        }
-
-        // ── PET MODAL ──
-        function openPetModal(name, type, age, sex, breed, desc, img) {
-            currentPet = name;
-            document.getElementById('modalName').textContent    = name;
-            document.getElementById('modalType').textContent    = type;
-            document.getElementById('modalAge').textContent     = age;
-            document.getElementById('modalSex').textContent     = sex;
-            document.getElementById('modalBreed').textContent   = breed;
-            document.getElementById('modalDesc').textContent    = desc;
-            document.getElementById('modalImg').src             = img;
-            document.getElementById('modalImg').alt             = name;
-            document.getElementById('petModalOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closePetModal() {
-            document.getElementById('petModalOverlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // ── ADOPT PANEL ──
-        function openAdoptPanel() {
-            document.getElementById('petModalOverlay').classList.remove('active');
-            document.getElementById('panelPetName').textContent  = currentPet;
-            document.getElementById('successPetName').textContent = currentPet;
-            resetAdoptForm();
-            document.getElementById('adoptOverlay').classList.add('active');
-            document.getElementById('adoptPanel').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeAdoptPanel() {
-            document.getElementById('adoptOverlay').classList.remove('active');
-            document.getElementById('adoptPanel').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        function resetAdoptForm() {
-            document.querySelectorAll('.panel-form-step').forEach(s => s.classList.remove('active'));
-            document.getElementById('pstep1').classList.add('active');
-            document.querySelectorAll('.panel-step-dot').forEach((d, i) => {
-                d.classList.remove('active', 'done');
-                if (i === 0) d.classList.add('active');
-            });
-        }
-
-        function pGoTo(n) {
-            if (n === 2) {
-                const f = ['pFullName','pAge','pEmail','pPhone','pAddress'];
-                if (f.some(id => !document.getElementById(id).value.trim())) {
-                    alert('Please fill in all required fields before continuing.');
-                    return;
-                }
-            }
-            if (n === 3) {
-                if (!document.getElementById('pHomeType').value) {
-                    alert('Please select your home type before continuing.');
-                    return;
-                }
-                buildPSummary();
-            }
-            document.querySelectorAll('.panel-form-step').forEach(s => s.classList.remove('active'));
-            document.getElementById('pstep' + n).classList.add('active');
-            document.querySelectorAll('.panel-step-dot').forEach((d, i) => {
-                d.classList.remove('active', 'done');
-                if (i + 1 < n)  d.classList.add('done');
-                if (i + 1 === n) d.classList.add('active');
-            });
-            document.getElementById('adoptPanel').scrollTop = 0;
-        }
-
-        function buildPSummary() {
-            const rows = {
-                'Pet to Adopt'   : currentPet,
-                'Full Name'      : document.getElementById('pFullName').value,
-                'Age'            : document.getElementById('pAge').value,
-                'Email'          : document.getElementById('pEmail').value,
-                'Phone'          : document.getElementById('pPhone').value,
-                'Address'        : document.getElementById('pAddress').value,
-                'Home Type'      : document.getElementById('pHomeType').value,
-                'Other Pets'     : document.getElementById('pOtherPets').value  || '—',
-                'Children'       : document.getElementById('pChildren').value   || '—',
-                'Pet Alone Hours': document.getElementById('pAloneHours').value || '—',
-                'Reason'         : document.getElementById('pReason').value     || '—',
-            };
-            document.getElementById('pSummaryBox').innerHTML =
-                Object.entries(rows).map(([k,v]) =>
-                    `<div class="summary-row"><span>${k}</span><strong>${v}</strong></div>`
-                ).join('');
-        }
-
-        function pSubmit() {
-            if (!document.getElementById('pAgree').checked) {
-                alert('Please agree to the adoption polici                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="cat.jpg" alt="Milo">
-                    <div class="card-body">
-                        <h3>Milo</h3>
-                        <button onclick="adoptPet('Milo')">Adopt</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="dog2.jpg" alt="Luna">
-                    <div class="card-body">
-                        <h3>Luna</h3>
-                        <button onclick="adoptPet('Luna')">Adopt</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="dog3.jpg" alt="Rocky">
-                    <div class="card-body">
-                        <h3>Rocky</h3>
-                        <button onclick="adoptPet('Rocky')">Adopt</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="dog4.jpg" alt="Arya">
-                    <div class="card-body">
-                        <h3>Arya</h3>
-                        <button onclick="adoptPet('Arya')">Adopt</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="dog5.jpg" alt="Lily">
-                    <div class="card-body">
-                        <h3>Lily</h3>
-                        <button onclick="adoptPet('Lily')">Adopt</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>© 2026 Stray Love PH Shelter</p>
-    </footer>
-
-    <script>
-        function adoptPet(name) {
-            alert("Please fill out the adoption form to adopt " + name + "!");
-            window.location.href = "adoption.html";
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
